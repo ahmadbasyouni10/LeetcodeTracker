@@ -40,8 +40,8 @@ def fetch_data(api_token):
     """
 
     url = (
-    f"https://api.sportmonks.com/v3/football/fixtures?"
-    f"api_token={api_token}"
+        f"https://api.sportmonks.com/v3/football/fixtures?"
+        f"api_token={api_token}"
     )
 
     response = requests.get(url)

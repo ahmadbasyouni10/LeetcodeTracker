@@ -78,7 +78,8 @@ class TestMain(unittest.TestCase):
         df = create_dataframe(matches)
         self.assertEqual(
             list(df.columns),
-            ["id", "name", "starting_at", "result_info", "leg", "length", "has_odds"],
+            ["id", "name", "starting_at", "result_info", "leg", 
+             "length", "has_odds"],
         )
         self.assertEqual(df.iloc[0]["id"], 1)
 
