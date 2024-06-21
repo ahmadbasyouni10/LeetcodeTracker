@@ -1,7 +1,7 @@
-import requests
+import requests 
 import pandas as pd
-import sqlalchemy as db 
-from dotenv import load_dotenv
+import sqlalchemy as db  
+from dotenv import load_dotenv 
 import os
 
 load_dotenv()
