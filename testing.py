@@ -18,8 +18,9 @@ class TestMain(unittest.TestCase):
     def test_get_api_token(self):
         self.assertEqual(get_api_token(), "test_token")
 
-    @patch.dict(os.environ, {"API_TOKEN": None})
+    @patch.dict(os.environ, {"API_TOKEN": "test_token"}, clear=True)
     def test_get_api_token_none(self):
+        del os.environ["API_TOKEN"]
         self.assertIsNone(get_api_token())
 
     @patch.dict(os.environ, {"API_TOKEN": ""})
