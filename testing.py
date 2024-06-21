@@ -78,7 +78,7 @@ class TestMain(unittest.TestCase):
         df = create_dataframe(matches)
         self.assertEqual(
             list(df.columns),
-            ["id", "name", "starting_at", "result_info", "leg", 
+            ["id", "name", "starting_at", "result_info", "leg",
              "length", "has_odds"],
         )
         self.assertEqual(df.iloc[0]["id"], 1)
@@ -111,7 +111,7 @@ class TestMain(unittest.TestCase):
         mock_connection = MagicMock()
         mock_result = [(1, "Match 1", "2024-06-21", "Result", 1, 90, True)]
         mock_connection.execute.return_value \
-        .fetchall.return_value = mock_result
+            .fetchall.return_value = mock_result
         mock_engine.connect.return_value.__enter__.return_value = mock_connection
         mock_create_engine.return_value = mock_engine
 
