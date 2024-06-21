@@ -15,7 +15,7 @@ def get_api_token():
 
     Test cases:
     1. Normal case: The API token is fetched from the environment variables.
-    2. Edge case: The API token is not found in the environment variables 
+    2. Edge case: The API token is not found in the environment variables
     (None)
     3. Edge case: The API token is an empty string ('')
     """
@@ -39,7 +39,8 @@ def fetch_data(api_token):
     4. Edge case: Network issues causing a request failure.
     """
 
-    url = f"https://api.sportmonks.com/v3/football/fixtures?api_token={api_token}"
+    url = f"https://api.sportmonks.com/v3/football/fixtures?api_token=
+    {api_token}"
     response = requests.get(url)
     if response.status_code == 200:
         matches = response.json()
