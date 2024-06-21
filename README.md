@@ -16,6 +16,8 @@ This project retrieves football match fixtures from the Sportmonks API, stores t
   ```
 
 3. Create a .env file:
+* Claim your api key through sportmonks:
+  https://www.sportmonks.com/football-apis
 ```bash
 API_TOKEN=your_api_token_here
  ```
