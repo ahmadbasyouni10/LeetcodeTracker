@@ -1,14 +1,13 @@
 import requests
 import pandas as pd
-import sqlalchemy as db  
-from dotenv import load_dotenv 
+import sqlalchemy as db
+from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
 api_token = os.getenv('API_TOKEN')
 url = f'https://api.sportmonks.com/v3/football/fixtures?api_token={api_token}'
-
 response = requests.get(url)
 
 
@@ -22,6 +21,5 @@ if response.status_code == 200:
     with engine.connect() as connection:
         query_result = connection.execute(db.text('SELECT * FROM matches;')).fetchall()
         print(pd.DataFrame(query_result))
-        
 else:
     print('Error:', response.status_code)
