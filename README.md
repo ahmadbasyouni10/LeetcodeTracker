@@ -1,5 +1,6 @@
-# SEO-Tech-Developer-Football-Fixtures-Project https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project/actions/workflows/check-style.yaml/badge.svg
+# SEO-Tech-Developer-Football-Fixtures-Project
 
+![example workflow](https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project/actions/workflows/check-style.yaml/badge.svg)
 
 This project retrieves football match fixtures from the Sportmonks API, stores them in an SQLite database, and displays the stored data.
 
