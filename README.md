@@ -7,7 +7,7 @@ This project retrieves football match fixtures from the Sportmonks API, stores t
 1. Clone the repository:
    ```bash
    git clone https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project
-   cd <repository_name>
+   cd SEO-Tech-Developer-Project
     ```
 
 2. Install Dependencies:
@@ -22,7 +22,7 @@ API_TOKEN=your_api_token_here
 
 ## How To Run
 ```bash
-python your_script_name.py
+python main.py
  ```
 
 ## Overview
