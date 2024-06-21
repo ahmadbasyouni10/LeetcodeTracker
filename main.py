@@ -15,7 +15,8 @@ def get_api_token():
 
     Test cases:
     1. Normal case: The API token is fetched from the environment variables.
-    2. Edge case: The API token is not found in the environment variables (None)
+    2. Edge case: The API token is not found in the environment variables 
+    (None)
     3. Edge case: The API token is an empty string ('')
     """
 
