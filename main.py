@@ -42,7 +42,7 @@ def fetch_data(api_token):
     url = (
     f"https://api.sportmonks.com/v3/football/fixtures?"
     f"api_token={api_token}"
-)
+    )
 
     response = requests.get(url)
     if response.status_code == 200:
@@ -113,7 +113,8 @@ def query_database(engine):
     3. Edge case: Database connection issue.
     """
     with engine.connect() as connection:
-        query_result = connection.execute(db.text("SELECT * FROM matches;")).fetchall()
+        query_result = connection.execute
+        (db.text("SELECT * FROM matches;")).fetchall()
     return pd.DataFrame(query_result)
 
 
