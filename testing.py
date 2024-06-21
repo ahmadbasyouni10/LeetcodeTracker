@@ -110,7 +110,8 @@ class TestMain(unittest.TestCase):
         mock_engine = MagicMock()
         mock_connection = MagicMock()
         mock_result = [(1, "Match 1", "2024-06-21", "Result", 1, 90, True)]
-        mock_connection.execute.return_value.fetchall.return_value = mock_result
+        mock_connection.execute.return_value \
+        .fetchall.return_value = mock_result
         mock_engine.connect.return_value.__enter__.return_value = mock_connection
         mock_create_engine.return_value = mock_engine
 
