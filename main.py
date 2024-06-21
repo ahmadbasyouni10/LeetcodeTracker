@@ -1,4 +1,4 @@
-import requests 
+import requests
 import pandas as pd
 import sqlalchemy as db  
 from dotenv import load_dotenv 
@@ -14,7 +14,8 @@ response = requests.get(url)
 
 if response.status_code == 200:
     matches = response.json()
-    matches_df = pd.DataFrame(matches['data'], columns=['id', 'name', 'starting_at', 'result_info', 'leg', 'length', 'has_odds'])
+    matches_df = pd.DataFrame(matches['data'], columns=['id', 'name', 
+    'starting_at', 'result_info', 'leg', 'length', 'has_odds'])
     engine = db.create_engine('sqlite:///soccergames.db')
     matches_df.to_sql('matches', con=engine, if_exists='replace', index=False)
 
@@ -24,5 +25,3 @@ if response.status_code == 200:
         
 else:
     print('Error:', response.status_code)
-    
-
