@@ -1,7 +1,9 @@
 import unittest
+from warnings import filterwarnings
+filterwarnings("ignore", category=UserWarning, message='.*pandas only supports SQLAlchemy connectable.*')
+import pandas as pd
 from unittest.mock import patch, MagicMock
 import os
-import pandas as pd
 from main import (
     get_api_token,
     fetch_data,
