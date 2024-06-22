@@ -3,9 +3,6 @@ from dotenv import load_dotenv
 import sqlalchemy as db
 import pandas as pd
 import requests
-from warnings import filterwarnings
-filterwarnings("ignore", category=UserWarning,
-               message='.*pandas only supports SQLAlchemy connectable.*')
 
 load_dotenv()
 

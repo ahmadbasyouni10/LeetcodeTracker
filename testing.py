@@ -7,9 +7,6 @@ import os
 from unittest.mock import patch, MagicMock
 import pandas as pd
 import unittest
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning,
-                        message='.*pandas only supports SQLAlchemy connectable.*')
 
 
 class TestMain(unittest.TestCase):
