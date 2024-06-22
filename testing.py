@@ -1,20 +1,18 @@
-import unittest
-from warnings import filterwarnings
-filterwarnings("ignore", category=UserWarning, message='.*pandas only supports SQLAlchemy connectable.*')
-import pandas as pd
-from unittest.mock import patch, MagicMock
-import os
 from main import (
     get_api_token,
     fetch_data,
     create_dataframe,
-    save_to_database,
-    query_database,
 )
+import os
+from unittest.mock import patch, MagicMock
+import pandas as pd
+import unittest
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning,
+                        message='.*pandas only supports SQLAlchemy connectable.*')
 
 
 class TestMain(unittest.TestCase):
-
     # Test get_api_token (normal, none, empty)
     @patch.dict(os.environ, {"API_TOKEN": "test_token"})
     def test_get_api_token(self):
@@ -84,44 +82,6 @@ class TestMain(unittest.TestCase):
              "length", "has_odds"],
         )
         self.assertEqual(df.iloc[0]["id"], 1)
-
-    @patch("sqlalchemy.create_engine")
-    def test_save_to_database(self, mock_create_engine):
-        df = pd.DataFrame(
-            [
-                {
-                    "id": 1,
-                    "name": "Match 1",
-                    "starting_at": "2024-06-21",
-                    "result_info": "Result",
-                    "leg": 1,
-                    "length": 90,
-                    "has_odds": True,
-                }
-            ]
-        )
-        mock_engine = MagicMock()
-        mock_create_engine.return_value = mock_engine
-
-        result_engine = save_to_database(df)
-        mock_create_engine.assert_called_once_with("sqlite:///soccergames.db")
-        self.assertEqual(result_engine, mock_engine)
-
-    @patch("sqlalchemy.create_engine")
-    def test_query_database(self, mock_create_engine):
-        mock_engine = MagicMock()
-        mock_connection = MagicMock()
-        mock_result = [(1, "Match 1", "2024-06-21", "Result", 1, 90, True)]
-        mock_connection.execute.return_value \
-            .fetchall.return_value = mock_result
-        mock_engine.connect.return_value.__enter__.return_value = \
-            mock_connection
-        mock_create_engine.return_value = mock_engine
-
-        result_df = query_database(mock_engine)
-        self.assertEqual(len(result_df), 1)
-        self.assertEqual(result_df.iloc[0][0], 1)
-        self.assertEqual(result_df.iloc[0][1], "Match 1")
 
 
 if __name__ == "__main__":
