@@ -113,8 +113,8 @@ def query_database(engine):
     3. Edge case: Database connection issue.
     """
     with engine.connect() as connection:
-        query_result = connection.execute
-        (db.text("SELECT * FROM matches;")).fetchall()
+        query = db.text("SELECT * FROM matches;")
+        query_result = connection.execute(query).fetchall()
     return pd.DataFrame(query_result)
 
 
