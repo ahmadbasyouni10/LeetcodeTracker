@@ -4,3 +4,22 @@ __pycache__/
 *.pyo
 *.pyd
 *.db
+
+# Virtual environment
+venv/
+venv*/
+.Python
+bin/
+include/
+lib/
+lib64/
+pip-selfcheck.json
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Dependency directories
+node_modules/
+/dist/
