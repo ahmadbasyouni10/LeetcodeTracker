@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {Container, Stack, Text} from '@chakra-ui/react'
 import Navbar from './components/Navbar'
-import UserGrid from './components/ProblemGrid'
+import ProblemGrid from './components/ProblemGrid'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [problems, setProblems] = useState([])
 
   return (
     <Stack minH={"100vh"}>
@@ -23,10 +24,9 @@ function App() {
             bgGradient={"linear(to-r, cyan.400,blue.500)"} bgClip={"text"}>
           My Problems</Text>
           🚀
-
         </Text>
 
-        <UserGrid />
+        <ProblemGrid problems={problems} setProblems={setProblems}/>
 
       </Container>
 
