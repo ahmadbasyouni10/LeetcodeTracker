@@ -3,13 +3,14 @@ import {Container, Stack, Text} from '@chakra-ui/react'
 import Navbar from './components/Navbar'
 import ProblemGrid from './components/ProblemGrid'
 
+export const BASEURL = 'http://localhost:5000/api'
 function App() {
 
   const [problems, setProblems] = useState([])
 
   return (
     <Stack minH={"100vh"}>
-      <Navbar />
+      <Navbar setProblems={setProblems} />
 
       <Container maxW={"1200px"} my={4}>
         <Text
