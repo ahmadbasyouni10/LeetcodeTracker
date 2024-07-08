@@ -1,51 +1,53 @@
-export const PROBLEMS = [
+const PROBLEMS = [
     {
         id: 1,
         name: "Two Sum",
         difficulty: "Easy",
         notes: "Use a hashmap to track the complement of each number.",
-        is_solved: true,
+        status: "Solved",
     },
     {
         id: 2,
         name: "Add Two Numbers",
         difficulty: "Medium",
         notes: "Remember to handle carry over for digits summing more than 9.",
-        is_solved: false,
+        status: "In Progress",
     },
     {
         id: 3,
         name: "Longest Substring Without Repeating Characters",
         difficulty: "Medium",
         notes: "Sliding window can efficiently solve this problem.",
-        is_solved: true,
+        status: "Unsolved",
     },
     {
         id: 4,
         name: "Median of Two Sorted Arrays",
         difficulty: "Hard",
         notes: "Binary search can be applied to find the median in logarithmic time.",
-        is_solved: false,
+        status: "Solved",
     },
     {
         id: 5,
         name: "Longest Palindromic Substring",
         difficulty: "Medium",
         notes: "Expand around center can solve it in O(n^2) time.",
-        is_solved: true,
+        status: "In Progress",
     },
     {
         id: 6,
         name: "ZigZag Conversion",
         difficulty: "Medium",
         notes: "The key is to find the pattern of the indices.",
-        is_solved: false,
+        status: "Unsolved",
     },
     {
         id: 7,
         name: "Reverse Integer",
         difficulty: "Easy",
         notes: "Watch out for overflow when reversing.",
-        is_solved: true,
+        status: "Solved",
     },
 ];
+
+export default PROBLEMS
