@@ -3,7 +3,7 @@ import { IoMoon} from "react-icons/io5"
 import { LuSun } from "react-icons/lu"
 import CreateProblemModal from "./CreateProblemModal"
 
-const Navbar = () => {
+const Navbar = ({setProblems}) => {
     const { colorMode, toggleColorMode } = useColorMode()
     return <Container maxW={"900px"}>
         <Box
@@ -34,7 +34,7 @@ const Navbar = () => {
                     {colorMode === "light" ? <IoMoon /> : <LuSun size={20} />}
 
                 </Button>
-                <CreateProblemModal />
+                <CreateProblemModal setProblems={setProblems}/>
                 </Flex>
 
 
