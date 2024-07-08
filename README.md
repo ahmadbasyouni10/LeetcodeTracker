@@ -1,16 +1,16 @@
-# SEO-Tech-Developer-Football-Fixtures-Project
+# LeetcodeTracker-SEO-Tech-Developer
 
 ![example workflow](https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project/actions/workflows/check-style.yaml/badge.svg)
 ![example workflow](https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project/actions/workflows/test.yaml/badge.svg)
 
-This project retrieves football match fixtures from the Sportmonks API, stores them in an SQLite database, and displays the stored data.
+Leetcode Tracker helps you track your problems for coding interviews, by allowing users to CRUD coding problems. Users can track the name of each problem, its status (Solved, Unsolved, In Progress), and add notes to assist with review before an interview. Built with Python Flask, React, ChakraUI, and SQLite3.
 
 ## Setup Instructions
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project
-   cd SEO-Tech-Developer-Project
+   git clone https://github.com/ahmadbasyouni10/LeetcodeTracker-SEO-Tech-Developer
+   cd LeetcodeTracker-SEO-Tech-Developer
     ```
 
 2. Install Dependencies:
@@ -31,9 +31,10 @@ python main.py
  ```
 
 ## Overview
-* Retrieves football match fixtures from the Sportmonks API using requests.
-* Parses the JSON data into a Pandas DataFrame (matches_df).
-* Creates an SQLite database named soccergames.db using SQLAlchemy (engine).
-* Stores the match data into an SQLite table named matches.
-* Fetches and prints all rows from the matches table using SQL queries (SELECT * FROM matches;).
+* Allows users to create, read, update, and delete (CRUD) Leetcode problems.
+* Tracks the name of each problem, its status (Solved, Unsolved, In Progress), and notes for review before an interview.
+* Built with Python Flask for the backend.
+* Uses React and ChakraUI for the frontend interface.
+* Utilizes SQLite3 as the database to store problem data.
+* Provides a user-friendly interface to manage and organize coding problems effectively.
 
