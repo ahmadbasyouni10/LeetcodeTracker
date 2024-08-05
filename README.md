@@ -1,4 +1,4 @@
-# LeetcodeTracker-SEO-Tech-Developer
+# LeetcodeTracker
 
 ![example workflow](https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project/actions/workflows/check-style.yaml/badge.svg)
 ![example workflow](https://github.com/ahmadbasyouni10/SEO-Tech-Developer-Project/actions/workflows/test.yaml/badge.svg)
